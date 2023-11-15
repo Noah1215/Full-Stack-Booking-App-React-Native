@@ -12,6 +12,9 @@ import ProfileScreen from "./screens/ProfileScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import SearchScreen from "./screens/SearchScreen";
 import PlacesScreen from "./screens/PlacesScreen";
+import MapScreen from "./screens/MapScreen";
+import PropertyInfoScreen from "./screens/PropertyInfoScreen";
+import RoomScreen from "./screens/RoomScreen";
 
 const StackNavigator = () => {
   const Tab = createBottomTabNavigator();
@@ -97,6 +100,13 @@ const StackNavigator = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Places" component={PlacesScreen} />
+        <Stack.Screen
+          name="Map"
+          component={MapScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="Info" component={PropertyInfoScreen} />
+        <Stack.Screen name="Rooms" component={RoomScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
